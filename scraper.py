@@ -10,4 +10,4 @@ page_content = BeautifulSoup(res.content, "html.parser")
 prices = page_content.find(class_='item-price')
 
 for price in prices:
-    print (price.string)
+    print price.string
