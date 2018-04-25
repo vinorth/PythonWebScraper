@@ -7,6 +7,7 @@ res = requests.get(url, timeout=5)
 
 page_content = BeautifulSoup(res.content, "html.parser")
 
-prices = page_content.find(class_='item-price').string
+prices = page_content.find(class_='item-price')
 
-print(prices)
+for price in prices:
+    print (price.string)
